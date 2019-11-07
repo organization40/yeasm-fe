@@ -1,0 +1,25 @@
+<form class="form-horizontal" [formGroup]="form">
+  <div class="form-group">
+    <label for="txtFirstName">First Name</label>
+    <input type="text" class="form-control" id="txtFirstName" aria-describedby="First name" placeholder="Enter first name" [(ngModel)]="model.currentUser.firstName" [ngModelOptions]="{standalone: true}"/>
+  </div>
+  <div class="form-group">
+    <label for="txtLastName">lastName</label>
+    <input type="text" class="form-control" id="txtLastName" aria-describedby="Last name" placeholder="Enter last name" [(ngModel)]="model.currentUser.lastName" [ngModelOptions]="{standalone: true}"/>
+  </div>
+  <div class="form-group">
+    <label for="txtJointDate">Joint date</label>
+    <input type="text" class="form-control" id="txtJointDate" aria-describedby="Disabled" value="{{model.currentUser.jointDate}}" disabled="true"/>
+  </div>
+  <div class="form-group">
+    <label for="txtNickname">Nickname</label>
+    <input type="text" class="form-control" id="txtNickName" [(ngModel)]="model.currentUser.nickname" [ngModelOptions]="{standalone: true}"/>
+  </div>
+  <div class="form-group">
+      <label for="txtEmail">Email address</label>
+      <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" [(ngModel)]="model.currentUser.email" formControlName="email"/>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="submitUserChanges()">Submit</button>
+  <button type="submit" class="btn btn-primary">Change Password</button>
+</form>

@@ -1,0 +1,5 @@
+self.hasOwnProperty(key) always returned false though the property existed
+==> Solution: the property has to have a default value (e.g. undefined) in order to be seen by the hasOwnProperty function (no reference, figured that out on my own)
+
+super(someParameter) didn't function, parent constructor was not called
+==> Solution: parent file name did obviously not adhere to file name conventions, it was neamed entityBase.model.ts. After renaming to entity_base.model.ts it worked (no reference, figured that out on my own)

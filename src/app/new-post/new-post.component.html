@@ -1,0 +1,12 @@
+<ckeditor [(ngModel)]="editorData" [editor]="Editor" ></ckeditor>
+<button (click)="onClickMe()" type="button" class="btn btn-primary">Save</button>
+<p>{{message}}</p>
+<div class="card" style="width: 100%;" *ngFor="let post of posts">
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Created on {{post.created}}</h6>
+    <p [innerHTML]="post.postText" class="card-text"></p>
+    <a href="#{{post.id}}" class="card-link">next </a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
