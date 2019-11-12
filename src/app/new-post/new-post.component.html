@@ -8,5 +8,6 @@
     <p [innerHTML]="post.postText" class="card-text"></p>
     <a href="#{{post.id}}" class="card-link">next </a>
     <a href="#" class="card-link">Another link</a>
+    <p *ngIf="post.createdBy !== undefined">Created by: {{post.createdBy.nickname}}</p>
   </div>
 </div>

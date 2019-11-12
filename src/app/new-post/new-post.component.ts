@@ -29,7 +29,7 @@ export class NewPostComponent implements OnInit {
   udpatePosts() {
     const self = this;
     // TODO: Confirm if there's a better way to do this then using <any>
-    this.http.get<any>('http://localhost/yeasm-be/public/api/posts')
+    this.http.get<any>('http://localhost/yeasm-be/public/api/posts/depth/1')
       .subscribe(
           res => {
             if (res.status === 'ok') {

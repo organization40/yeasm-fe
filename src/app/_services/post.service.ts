@@ -7,7 +7,7 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   getPosts(model) {
-    this.http.get('http://localhost/yeasm-be/public/api/posts').subscribe(
+    this.http.get('http://localhost/yeasm-be/public/api/posts/depth/1').subscribe(
       data  => {
         model.posts = data;
         }

@@ -16,5 +16,6 @@ export class User extends EntityBase {
   password: string = undefined;
   dateOfBirth: Date = undefined;
   email: string = undefined;
+  createdBy: User = undefined;
 
 }
